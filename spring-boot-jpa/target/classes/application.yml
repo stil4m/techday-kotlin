@@ -1,9 +1,0 @@
-spring:
-  jpa:
-    database: H2
-    generate-ddl: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-  datasource:
-    url: jdbc:h2:mem:OGN;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALS
