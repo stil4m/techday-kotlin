@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class ExampleRestResource {
 
+    fun data() =
+            Pair("hello", "world")
+
     @GetMapping(path = arrayOf("/example"))
     fun example() =
-            Pair("hello", "world")
-                    .let { mapOf(it) }
+            data().let { mapOf(it) }
                     .let { ResponseEntity.ok(it) }
 }
